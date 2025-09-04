@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > Microsoft recently released VibeVoice - a high-quality, longform conversational TTS model.
 > Earlier today, they deleted the 7B model from Hugging Face and deleted the GitHub repo.
-> This is a backup of the code (as of ~2 days ago). I have also backed up the models [here](https://huggingface.co/backups) on Hugging Face.
+> This is a backup of the code (as of ~2 days ago). I have also backed up the models [here](https://huggingface.co/vibevoice) on Hugging Face.
 > 
 > Happy to add people as contributors or merge PRs!
 
