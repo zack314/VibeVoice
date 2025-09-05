@@ -1,9 +1,11 @@
 > [!IMPORTANT]
-> Microsoft recently released VibeVoice - a high-quality, longform conversational TTS model.
+> Sep 4, 2025: Microsoft recently released VibeVoice - a high-quality, longform conversational TTS model.
 > Earlier today, they deleted the 7B model from Hugging Face and deleted the GitHub repo.
 > This is a backup of the code (as of ~2 days ago). I have also backed up the models [here](https://huggingface.co/vibevoice) on Hugging Face.
 > 
-> Happy to add people as contributors or merge PRs!
+> Sep 5, 2025: Microsoft has made the [VibeVoice repo](https://github.com/microsoft/VibeVoice) public again (although without code) and released an official statement:
+> 
+> > VibeVoice is an open-source research framework intended to advance collaboration in the speech synthesis community. After release, we discovered instances where the tool was used in ways inconsistent with the stated intent. Since responsible use of AI is one of Microsoft’s guiding principles, we have disabled this repo until we are confident that out-of-scope use is no longer possible.
 
 <div align="center">
 
