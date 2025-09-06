@@ -6,6 +6,8 @@
 > Sep 5, 2025: Microsoft has made the [VibeVoice repo](https://github.com/microsoft/VibeVoice) public again (although without code) and released an official statement:
 > 
 > > VibeVoice is an open-source research framework intended to advance collaboration in the speech synthesis community. After release, we discovered instances where the tool was used in ways inconsistent with the stated intent. Since responsible use of AI is one of Microsoft’s guiding principles, we have disabled this repo until we are confident that out-of-scope use is no longer possible.
+>
+> Sep 6, 2025: Unofficial training/fine-tuning code implementation is coming soon! Stay tuned
 
 <div align="center">
 
