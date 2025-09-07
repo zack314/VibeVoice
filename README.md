@@ -1,106 +1,40 @@
 > [!IMPORTANT]
-> Sep 4, 2025: Microsoft recently released VibeVoice - a high-quality, longform conversational TTS model.
-> Earlier today, they deleted the 7B model from Hugging Face and deleted the GitHub repo.
-> This is a backup of the code (as of ~2 days ago). I have also backed up the models [here](https://huggingface.co/vibevoice) on Hugging Face.
-> 
-> Sep 5, 2025: Microsoft has made the [VibeVoice repo](https://github.com/microsoft/VibeVoice) public again (although without code) and released an official statement:
-> 
-> > VibeVoice is an open-source research framework intended to advance collaboration in the speech synthesis community. After release, we discovered instances where the tool was used in ways inconsistent with the stated intent. Since responsible use of AI is one of Microsoft’s guiding principles, we have disabled this repo until we are confident that out-of-scope use is no longer possible.
->
-> Sep 6, 2025: Unofficial training/fine-tuning code implementation is coming soon! Stay tuned
-
-<div align="center">
+> This is a community-maintained fork of VibeVoice. Following the removal of the official VibeVoice repository, this fork serves to preserve the codebase and maintain accessibility for the community while also introducing additional functionality (such as unofficial training/fine-tuning implementations)
 
 ## 🎙️ VibeVoice: A Frontier Long Conversational Text-to-Speech Model
-[![Project Page](https://img.shields.io/badge/Project-Page-blue?logo=microsoft)](https://microsoft.github.io/VibeVoice)
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface)](https://huggingface.co/collections/microsoft/vibevoice-68a2ef24a875c44be47b034f)
-[![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/pdf/2508.19205)
-[![Colab](https://img.shields.io/badge/Run-Colab-orange?logo=googlecolab)](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
-[![Live Playground](https://img.shields.io/badge/Live-Playground-green?logo=gradio)](https://aka.ms/VibeVoice-Demo)
 
-</div>
-<!-- <div align="center">
-<img src="Figures/log.png" alt="VibeVoice Logo" width="200">
-</div> -->
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Figures/VibeVoice_logo_white.png">
-  <img src="Figures/VibeVoice_logo.png" alt="VibeVoice Logo" width="300">
-</picture>
-</div>
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://microsoft.github.io/VibeVoice)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models-orange?logo=huggingface)](https://huggingface.co/vibevoice)
+[![Technical Report](https://img.shields.io/badge/Technical-Report-red)](https://arxiv.org/pdf/2508.19205)
+[![Colab](https://img.shields.io/badge/Colab-Demo-orange?logo=googlecolab)](https://colab.research.google.com/github/vibevoice-community/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
 
 VibeVoice is a novel framework designed for generating **expressive**, **long-form**, **multi-speaker** conversational audio, such as podcasts, from text. It addresses significant challenges in traditional Text-to-Speech (TTS) systems, particularly in scalability, speaker consistency, and natural turn-taking.
 
 A core innovation of VibeVoice is its use of continuous speech tokenizers (Acoustic and Semantic) operating at an ultra-low frame rate of 7.5 Hz. These tokenizers efficiently preserve audio fidelity while significantly boosting computational efficiency for processing long sequences. VibeVoice employs a [next-token diffusion](https://arxiv.org/abs/2412.08635) framework, leveraging a Large Language Model (LLM) to understand textual context and dialogue flow, and a diffusion head to generate high-fidelity acoustic details.
 
-The model can synthesize speech up to **90 minutes** long with up to **4 distinct speakers**, surpassing the typical 1-2 speaker limits of many prior models. 
+The model can synthesize speech up to **90 minutes** long with up to **4 distinct speakers**, surpassing the typical 1-2 speaker limits of many prior models.
 
+[Examples](./EXAMPLES.md)
 
 <p align="left">
   <img src="Figures/MOS-preference.png" alt="MOS Preference Results" height="260px">
   <img src="Figures/VibeVoice.jpg" alt="VibeVoice Overview" height="250px" style="margin-right: 10px;">
 </p>
 
-### 🔥 News
 
-- **[2025-08-26] 🎉 We Open Source the [VibeVoice-Large](https://huggingface.co/vibevoice/VibeVoice-7B) model weights!**
-- **[2025-08-28] 🎉 We provide a [Colab](https://colab.research.google.com/github/microsoft-community/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) script for easy access to our model. Due to GPU memory limitations, only VibeVoice-1.5B is supported.**
+### Updates
 
-### 📋 TODO
+- **[2025-09-06]** Unofficial training/fine-tuning code coming soon!
+- **[2025-09-05]** Microsoft repo restored (without code) with statement about responsible AI use.
+- **[2025-09-04]** Community backup created after Microsoft removed original repo and models.
+- **[2025-08-26]** The [VibeVoice-7B](https://huggingface.co/vibevoice/VibeVoice-7B) model weights are open-sourced!
+- **[2025-08-28]** [Colab Notebook](https://colab.research.google.com/github/microsoft-community/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) available. Only VibeVoice-1.5B is supported due to GPU memory limitations.
 
-- [ ] Merge models into official Hugging Face repository ([PR](https://github.com/huggingface/transformers/pull/40546))
-- [ ] Release example training code and documentation
-- [ ] VibePod:  End-to-end solution that creates podcasts from documents, webpages, or even a simple topic.
+### Roadmap
 
-### 🎵 Demo Examples
-
-
-**Video Demo**
-
-We produced this video with [Wan2.2](https://github.com/Wan-Video/Wan2.2). We sincerely appreciate the Wan-Video team for their great work.
-
-**English**
-<div align="center">
-
-https://github.com/user-attachments/assets/0967027c-141e-4909-bec8-091558b1b784
-
-</div>
-
-
-**Chinese**
-<div align="center">
-
-https://github.com/user-attachments/assets/322280b7-3093-4c67-86e3-10be4746c88f
-
-</div>
-
-**Cross-Lingual**
-<div align="center">
-
-https://github.com/user-attachments/assets/838d8ad9-a201-4dde-bb45-8cd3f59ce722
-
-</div>
-
-**Spontaneous Singing**
-<div align="center">
-
-https://github.com/user-attachments/assets/6f27a8a5-0c60-4f57-87f3-7dea2e11c730
-
-</div>
-
-
-**Long Conversation with 4 people**
-<div align="center">
-
-https://github.com/user-attachments/assets/a357c4b6-9768-495c-a576-1618f6275727
-
-</div>
-
-For more examples, see the [Project Page](https://microsoft.github.io/VibeVoice).
-
-Try it on [Colab](https://colab.research.google.com/github/vibevoice-community/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb).
-
+- [ ] Unofficial/community training code
+- [ ] HF Transformers integration ([PR](https://github.com/huggingface/transformers/pull/40546))
+- [ ] VibePod: End-to-end solution that creates podcasts from documents, webpages, or even a simple topic.
 
 
 ## Models
@@ -117,7 +51,7 @@ We recommend to use NVIDIA Deep Learning Container to manage the CUDA environmen
 ```bash
 # NVIDIA PyTorch Container 24.07 / 24.10 / 24.12 verified. 
 # Later versions are also compatible.
-sudo docker run --privileged --net=host --ipc=host --ulimit memlock=-1:-1 --ulimit stack=-1:-1 --gpus all --rm -it  nvcr.io/nvidia/pytorch:24.07-py3
+sudo docker run --privileged --net=host --ipc=host --ulimit memlock=-1:-1 --ulimit stack=-1:-1 --gpus all --rm -it nvcr.io/nvidia/pytorch:24.07-py3
 
 ## If flash attention is not included in your docker environment, you need to install it manually
 ## Refer to https://github.com/Dao-AILab/flash-attention for installation instructions
@@ -126,7 +60,7 @@ sudo docker run --privileged --net=host --ipc=host --ulimit memlock=-1:-1 --ulim
 
 2. Install from github
 ```bash
-git clone https://github.com/microsoft/VibeVoice.git
+git clone https://github.com/vibevoice-community/VibeVoice.git
 cd VibeVoice/
 
 pip install -e .
