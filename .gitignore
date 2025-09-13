@@ -1,5 +1,7 @@
 # Initially taken from Github's Python gitignore file
 
+aoi-ot/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
